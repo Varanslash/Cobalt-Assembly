@@ -1,0 +1,37 @@
++--- SYNTAX ---+
+Arithmetic:
+- add [register], [value] - adds the value to the register. the register must be stored in the integer division of memory.
+- sub [register], [value] - subtracts the value from the register. the register must be stored in the integer division of memory.
+- mul [register], [value] - multiplies the value by the register. the register must be stored in the integer division of memory.
+- div [register], [value] - divides the register by the value. the register must be stored in the integer division of memory.
+- mov [reg1], [reg2] - makes reg2 equal to reg1. both registers must be in the integer division of memory.
+
+Logic:
+- xor [reg1], [reg2], [dest] - does an xor bitwise operation with reg1 and reg2, then stores the resulting value in the dest register.
+- or [reg1], [reg2], [dest] - does an or bitwise operation with reg1 and reg2, then stores the resulting value in the dest register.
+- not [reg1], [dest] - flips all bits in reg1, then stores the resulting value in the dest register.
+- and [reg1], [reg2], [dest] - does an and bitwise operation with reg1 and reg2, then stores the resulting value in the dest register.
+
+Routines And Loops:
+- prt [reg] - prints the string stored in reg. the register must be in the string division of memory.
+- sar [name] - makes a slot for a routine.
+- sro [name], [instruction] - adds one command to any routine slot.
+- run [name] - executes the routine slot.
+- lop [name] - makes a slot for a loop.
+- lro [name], [instruction] - adds one command to any loop slot.
+- lup [name], [value] - executes the loop value times.
+WARNING: Routines and loops can't be put inside each other!
+
+Memory:
+- str [reg] - makes a string division register.
+- reg [reg] - makes an integer division register.
+- psh [reg] - pushes a integer division register onto the general stack.
+- pop [reg] - removes an integer division register from the general stack.
+- tru - sets general system flag to True.
+- fal - sets general system flag to False.
+
+Conditionals:
+- fif [routine1], [routine2] - executes routine1 if system flag is True, otherwise execute routine2.
+- rif [routine], [loop], [value] - executes routine if system flag is True, otherwise runs loop.
+- lif [loop1], [value1], [loop2], [value2] - runs loop1 if system flag is True, otherwise runs loop2.
+WARNING: Conditionals can't be put inside a routine or loop!
