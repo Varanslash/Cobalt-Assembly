@@ -35,3 +35,11 @@ Conditionals:
 - rif [routine], [loop], [value] - executes routine if system flag is True, otherwise runs loop.
 - lif [loop1], [value1], [loop2], [value2] - runs loop1 if system flag is True, otherwise runs loop2.
 WARNING: Conditionals can't be put inside a routine or loop!
+
+Misc.:
+- lod [filename.extension] - loads a file containing a cobalt script.
+
++--- CHANGELOG ---+
+V 1.1
+- .txt compatibility was added
+- javascript was removed
