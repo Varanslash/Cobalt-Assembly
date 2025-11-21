@@ -75,6 +75,8 @@ This section is mainly to detail "rulings" or certain behaviors that happen when
 - a loop inside a routine creates infinite recursion.
 - a routine inside a loop is fine, but the routine will always be called last.
 - lod inside a routine or loop loses the original code in favor of the new one (or it'll just crash, this is untested as of now)
+- there's a priority list based on what you call, no matter the order in the program. the order is isolated opcodes, loops, then routines, based on the priority
+script used to test this in 1.2.
 
 +--- TIPS ---+
 This section is for mine (and others') discoveries on how certain things can be done.
