@@ -69,6 +69,24 @@ rst - resets loop execution flags.
 frk - stops executing the current routine or loop.
 csh - exits the cobalt interpreter.
 
++--- PI PICO BOARD ---+
+This section details the opcodes used for the Raspberry Pi Pico version of Cobalt Assembly.
+
++--- hardware ---+
+pim [pin num], [in, out] - switches the pin mode between in and out.
+pow [pin num], [high, low] - switches the pin volt between high and low.
+rdi [pin num], [reg] - read a pin into a register.
+wri [pin num], [reg] - write a register into a pin.
+
++--- interrupts ---+
+int [rise, fall], [pin num], [rout1], [rout2] - sets an interrupt, then executes rout1 if rise, else executes rout2.
+pif [pin num], [routine] - triggers routine if the pin is already high, sets an interrupt
+
++--- misc ---+
+srt - soft reset
+hlt - hard reset
+slp [time unit], [value] - waits value * time unit. time units can be found in the sleep_units{} dict in the code.
+
 +--- SEMANTICS ---+
 This section is mainly to detail "rulings" or certain behaviors that happen when you put certain things together.
 - using ; on the same line as a command freezes the interpreter.
